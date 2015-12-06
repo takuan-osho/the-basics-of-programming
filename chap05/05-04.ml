@@ -1,4 +1,4 @@
-(* 目的: 2時方程式ax**2 + bx + c = 0 の係数を受け取ったら判別式の値を返す *)
+(* 目的: 2次方程式ax**2 + bx + c = 0 の係数を受け取ったら判別式の値を返す *)
 (* hanbetsushiki : float -> float -> float -> float *)
 let hanbetsushiki a b c = b ** 2.0 -. 4.0 *. a *. c
 
