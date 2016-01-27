@@ -16,3 +16,17 @@ let test2 = contain_zero [0; 2] = true
 let test3 = contain_zero [1; 2] = false
 let test4 = contain_zero [1; 2; 3; 0; 5; 6; 7] = true
 let test5 = contain_zero [1; 2; 3; 4; 5; 6; 7] = false
+
+(* 目的: 整数のリストを受け取り、そのリストの長さを返す *)
+(* length : lst -> int *)
+let rec length lst = match lst with
+| [] -> 0
+| first :: rest -> 1 + length rest
+
+(* テスト *)
+let test1 = length [] = 0
+let test2 = length [1] = 1
+let test3 = length [1; 2] = 2
+let test4 = length [1; 2; 3] = 3
+let test5 = length [1; 2; 3; 4] = 4
+let test6 = length [1; 2; 3; 4; 5] = 5
