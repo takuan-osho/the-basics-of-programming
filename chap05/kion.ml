@@ -1,5 +1,5 @@
 (* 目的: 現在の気温 t が15以上25以下かどうかをチェックする *)
-(* kaiteki t = false *)
+(* kaiteki int -> bool *)
 let kaiteki t =
   15 <= t && t <= 25
 
