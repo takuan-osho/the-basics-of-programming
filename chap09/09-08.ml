@@ -51,10 +51,10 @@ let lst5 = [person1; person2; person3; person4]
 (* otomeza : person_t list -> string list *)
 let rec otomeza lst = match lst with
 | [] -> []
-| {name = n; height = h; weight = w; birthday = {month; day}; blood_type = b_t} :: rest ->
-  if (month = 8 && day >= 24 && day <= 31) || (month = 9 && day >= 1 && day <= 23)
-    then n :: otomeza rest
-    else otomeza rest
+| {name = n; height = h; weight = w; birthday = {month; day}; blood_type = b_t} :: rest
+  -> if (month = 8 && day >= 24 && day <= 31) || (month = 9 && day >= 1 && day <= 23)
+      then n :: otomeza rest
+      else otomeza rest
 
 (* テスト *)
 let test1 = otomeza lst1 = []
