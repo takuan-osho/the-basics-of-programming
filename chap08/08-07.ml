@@ -3,5 +3,6 @@ type ekikan_t = {
   kiten : string;
   shuten : string;
   keiyu : string;
-  kyori : int
+  kyori : float;
+  jikan : int
 }
