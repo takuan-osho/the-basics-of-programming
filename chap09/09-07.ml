@@ -51,8 +51,9 @@ let lst5 = [person1; person2; person3; person4]
 (* count_ketstueki_A : person_t list -> int *)
 let rec count_ketstueki_A lst = match lst with
 | [] -> 0
-| {name = n; height = h; weight = w; birthday = b; blood_type = b_t} :: rest -> if b_t = "A" then 1 + count_ketstueki_A rest
-                          else count_ketstueki_A rest
+| {name = n; height = h; weight = w; birthday = b; blood_type = b_t} :: rest
+  -> if b_t = "A" then 1 + count_ketstueki_A rest
+                  else count_ketstueki_A rest
 
 (* テスト *)
 let test1 = count_ketstueki_A lst1 = 0
