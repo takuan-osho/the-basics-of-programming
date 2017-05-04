@@ -16,7 +16,7 @@ let test3 = sum [1; 3] = 4
 let test4 = sum [1; 2; 3; 4; 5; 6; 7; 8; 9; 10] = 55
 
 (* 目的: 整数のリストを受け取り、偶数の要素のみを含むリストを返す *)
-(* even : lst -> int list *)
+(* even : int list -> int list *)
 let rec even lst = match lst with
 | [] -> []
 | first :: rest -> if first mod 2 = 0 then first :: even rest
