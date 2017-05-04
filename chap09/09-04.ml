@@ -4,7 +4,7 @@
    という形 *)
 
 (* 目的: 受け取ったリスト 1st に 0 が含まれているかを調べる *)
-(* contain_zero 1st -> bool *)
+(* contain_zero int list -> bool *)
 let rec contain_zero lst = match lst with
 | [] -> false
 | first :: rest -> if first = 0 then true
@@ -18,7 +18,7 @@ let test4 = contain_zero [1; 2; 3; 0; 5; 6; 7] = true
 let test5 = contain_zero [1; 2; 3; 4; 5; 6; 7] = false
 
 (* 目的: 整数のリストを受け取り、そのリストの長さを返す *)
-(* length : lst -> int *)
+(* length : int list -> int *)
 let rec length lst = match lst with
 | [] -> 0
 | first :: rest -> 1 + length rest
