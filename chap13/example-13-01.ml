@@ -12,3 +12,12 @@ let rec count_A lst = match lst with
   | {namae = n; tensuu = t; seiseki = s} :: rest
     -> if s = "A" then 1 + count_A rest
                   else count_A rest
+
+
+(* 目的: 学生リスト lst のうち成績が seiseki0 の人の数を返す *)
+(* count : gakusei_t list -> string -> int *)
+let rec count lst seiseki0 = match lst with
+  | [] -> 0
+  | {namae = n; tensuu = t; seiseki = s} :: rest
+    -> if s = seiseki0 then 1 + count rest seiseki0
+                       else count rest seiseki0
